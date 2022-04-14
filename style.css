@@ -1,0 +1,74 @@
+.calculator {
+    /*Size*/
+    width: 400px;
+    height: 400px;
+
+    /*Layout*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    grid-template-areas:
+        "display display display display"
+        ". . . ."
+        ". . . equal"
+        ". . . equal"
+        ". . . equal"
+        ". . . equal";
+
+    /*Gap and color fill*/
+    gap: 2px;
+    background-color: #889daf;
+    border-radius: 20px;
+
+    /*Shadow*/
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+    /*Font*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+}
+
+.calculator > div {
+    /*Centering*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator > .display {
+    grid-area: display;
+    background-color: #434d52;
+    border-radius: 20px 20px 0px 0px;
+
+    /*Font and text positioning*/
+    color: white;
+    justify-content: flex-end;
+    padding-right: 20px;
+    font-size: 2rem;
+}
+
+.equal {
+    grid-area: equal;
+    background-color: #f77176;
+    border-bottom-right-radius: 20px;
+}
+
+.zero {
+    border-bottom-left-radius: 20px;
+}
+
+.operation {
+    background-color: #d3dce2;
+}
+
+.number {
+    background-color: #eef3f5;
+}
+
+/*Personal styling*/
+.operation:hover,
+.number:hover,
+.equal:hover {
+    opacity: 0.8;
+}
